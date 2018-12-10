@@ -10,9 +10,16 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var ImageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        //バンドルした画像を読み込み
+        let Image = UIImage(named: "tiger1.jpg" )
+        
+        //Imageに画像を表示
+        ImageView.image = Image
     }
 
     override func didReceiveMemoryWarning() {

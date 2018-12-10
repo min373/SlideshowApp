@@ -12,6 +12,9 @@
 		E9BE061221BECF7900D98D75 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9BE061021BECF7900D98D75 /* Main.storyboard */; };
 		E9BE061421BECF7B00D98D75 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9BE061321BECF7B00D98D75 /* Assets.xcassets */; };
 		E9BE061721BECF7B00D98D75 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9BE061521BECF7B00D98D75 /* LaunchScreen.storyboard */; };
+		E9BE061F21BED43C00D98D75 /* T34.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E9BE061E21BED43C00D98D75 /* T34.jpg */; };
+		E9BE062121BED44300D98D75 /* tiger1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E9BE062021BED44300D98D75 /* tiger1.jpg */; };
+		E9BE062321BED44B00D98D75 /* BT42.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E9BE062221BED44B00D98D75 /* BT42.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		E9BE061321BECF7B00D98D75 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E9BE061621BECF7B00D98D75 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E9BE061821BECF7B00D98D75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E9BE061E21BED43C00D98D75 /* T34.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = T34.jpg; sourceTree = "<group>"; };
+		E9BE062021BED44300D98D75 /* tiger1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tiger1.jpg; sourceTree = "<group>"; };
+		E9BE062221BED44B00D98D75 /* BT42.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BT42.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +62,9 @@
 			children = (
 				E9BE060C21BECF7900D98D75 /* AppDelegate.swift */,
 				E9BE060E21BECF7900D98D75 /* ViewController.swift */,
+				E9BE062221BED44B00D98D75 /* BT42.jpg */,
+				E9BE062021BED44300D98D75 /* tiger1.jpg */,
+				E9BE061E21BED43C00D98D75 /* T34.jpg */,
 				E9BE061021BECF7900D98D75 /* Main.storyboard */,
 				E9BE061321BECF7B00D98D75 /* Assets.xcassets */,
 				E9BE061521BECF7B00D98D75 /* LaunchScreen.storyboard */,
@@ -123,8 +132,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9BE061721BECF7B00D98D75 /* LaunchScreen.storyboard in Resources */,
+				E9BE061F21BED43C00D98D75 /* T34.jpg in Resources */,
 				E9BE061421BECF7B00D98D75 /* Assets.xcassets in Resources */,
+				E9BE062121BED44300D98D75 /* tiger1.jpg in Resources */,
 				E9BE061221BECF7900D98D75 /* Main.storyboard in Resources */,
+				E9BE062321BED44B00D98D75 /* BT42.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
