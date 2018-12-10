@@ -47,11 +47,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-49" y="33"/>
         </scene>
-        <!--View Controller-->
+        <!--Result View Controller-->
         <scene sceneID="TaL-yr-Ttx">
             <objects>
-                <viewController id="o0U-Dq-DoV" sceneMemberID="viewController">
+                <viewController id="o0U-Dq-DoV" customClass="ResultViewController" customModule="SlideshowApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ehh-Vl-S1d">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -69,6 +70,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="LEH-TG-Bds"/>
                     </view>
+                    <connections>
+                        <outlet property="EnlargeView" destination="uwc-aa-QIx" id="Nvr-FC-tkv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eUE-Fj-jNe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
