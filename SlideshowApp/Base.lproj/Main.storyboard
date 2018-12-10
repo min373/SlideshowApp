@@ -33,9 +33,13 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="再生/停止"/>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WBJ-Fg-gC4">
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WBJ-Fg-gC4">
                                 <rect key="frame" x="67" y="103" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="qPa-b2-Riw" appends="YES" id="66c-A2-Ote"/>
+                                </connections>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -43,9 +47,15 @@
                     </view>
                     <connections>
                         <outlet property="ImageView" destination="WBJ-Fg-gC4" id="7de-Fu-Pej"/>
+                        <segue destination="o0U-Dq-DoV" kind="show" identifier="result" id="Pqt-Ix-YGb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="qPa-b2-Riw">
+                    <connections>
+                        <action selector="TapImage:" destination="BYZ-38-t0r" id="NFI-Dx-Zq8"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-49" y="33"/>
         </scene>
@@ -65,6 +75,9 @@
                                 <rect key="frame" x="172" y="318" width="31" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="戻る"/>
+                                <connections>
+                                    <segue destination="V1u-tp-vtS" kind="unwind" unwindAction="unwind:" id="y4J-Ew-TmC"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -75,6 +88,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eUE-Fj-jNe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="V1u-tp-vtS" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="842" y="33"/>
         </scene>

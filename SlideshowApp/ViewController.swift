@@ -12,6 +12,14 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var ImageView: UIImageView!
     
+    @IBAction func TapImage(_ sender: Any) {
+        // セグエを使用して画面を遷移
+        performSegue(withIdentifier: "result", sender: nil)
+    }
+    
+    @IBAction func unwind(_ segue: UIStoryboardSegue) {
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
