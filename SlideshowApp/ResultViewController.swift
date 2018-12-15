@@ -11,15 +11,16 @@ import UIKit
 class ResultViewController: UIViewController {
 
     @IBOutlet weak var EnlargeView: UIImageView!
+    //最初の画面からの画像を媒介するクラス
+    var enlargeImage:UIImage?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        //バンドルした画像を読み込み
-        let Image = UIImage(named: "tiger1.jpg" )
-        //Imageに画像を表示
-        EnlargeView.image = Image
+        //UIImageViewに画像をセット→AspectFitで拡大→画像を表示
+        EnlargeView.image = enlargeImage
+        EnlargeView.contentMode = UIViewContentMode.scaleAspectFit
         
     }
 

@@ -63,7 +63,6 @@
 			isa = PBXGroup;
 			children = (
 				E9BE060C21BECF7900D98D75 /* AppDelegate.swift */,
-				E9BE060E21BECF7900D98D75 /* ViewController.swift */,
 				E9BE062221BED44B00D98D75 /* BT42.jpg */,
 				E9BE062021BED44300D98D75 /* tiger1.jpg */,
 				E9BE061E21BED43C00D98D75 /* T34.jpg */,
@@ -71,6 +70,7 @@
 				E9BE061321BECF7B00D98D75 /* Assets.xcassets */,
 				E9BE061521BECF7B00D98D75 /* LaunchScreen.storyboard */,
 				E9BE061821BECF7B00D98D75 /* Info.plist */,
+				E9BE060E21BECF7900D98D75 /* ViewController.swift */,
 				E9BE062421BEDD2000D98D75 /* ResultViewController.swift */,
 			);
 			path = SlideshowApp;

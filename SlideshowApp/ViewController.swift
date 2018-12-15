@@ -10,7 +10,12 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    //画像、進むボタン、戻るボタン、再生・停止ボタンのインスタンス作成
     @IBOutlet weak var ImageView: UIImageView!
+    @IBOutlet weak var go_forward_button: UIButton!
+    @IBOutlet weak var go_back_button: UIButton!
+    @IBOutlet weak var restart_stop_button: UIButton!
+    
     //タイマーの設定
     var timer:Timer! = nil
     // タイマー用の時間のための変数
@@ -27,6 +32,13 @@ class ViewController: UIViewController {
     @IBAction func TapImage(_ sender: Any) {
     // セグエを使用して画面を遷移
     performSegue(withIdentifier: "result", sender: nil)
+    }
+    //表示されている画像をResultViewControllerに渡す操作
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "result" {
+            let ResultViewController = segue.destination as! ResultViewController
+            ResultViewController.enlargeImage = ImageView.image
+        }
     }
     //進むボタンのアクションを設定
     @IBAction func go_forward(_ sender: Any) {
@@ -66,14 +78,24 @@ class ViewController: UIViewController {
         if self.timer == nil {
             // タイマーの作成、始動
             self.timer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(updateTimer(_:)), userInfo: nil, repeats: true)
+            //進む・戻るボタンを使用不可に変更
+            go_forward_button.isEnabled = false
+            go_back_button.isEnabled = false
+            //再生・停止ボタンのラベルを停止にセット
+            restart_stop_button.setTitle("停止", for: UIControlState.normal)
         }
         //停止：動作中のタイマーが存在するときだけ、タイマーの停止動作を実行する
         else if self.timer != nil {
             self.timer.invalidate()   // 現在のタイマーを破棄する
             self.timer = nil          // startTimer() の timer == nil で判断するために、 timer = nil としておく
+            //進む・戻るボタンを使用不可に変更
+            go_forward_button.isEnabled = true
+            go_back_button.isEnabled = true
+            //再生・停止ボタンのラベルを再生にセット
+            restart_stop_button.setTitle("再生", for: UIControlState.normal)
         }
     }
-    //帰還セグエ
+    //unwind segue
     @IBAction func unwind(_ segue: UIStoryboardSegue) {
     }
     
@@ -84,6 +106,8 @@ class ViewController: UIViewController {
         let Image = UIImage(named: "tiger1.jpg" )
         //Imageに画像を表示
         ImageView.image = Image
+        //再生・停止ボタンのラベルを再生にセット
+        restart_stop_button.setTitle("再生", for: UIControlState.normal)
     }
     
     // selector: #selector(updatetimer(_:)) で指定された関数
