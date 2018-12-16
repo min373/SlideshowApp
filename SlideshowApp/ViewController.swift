@@ -30,8 +30,18 @@ class ViewController: UIViewController {
         ]
     
     @IBAction func TapImage(_ sender: Any) {
-    // セグエを使用して画面を遷移
-    performSegue(withIdentifier: "result", sender: nil)
+        // セグエを使用して画面を遷移
+        performSegue(withIdentifier: "result", sender: nil)
+        //拡大画面に遷移している間は画像送りを停止する
+        if self.timer != nil {
+            self.timer.invalidate()   // 現在のタイマーを破棄する
+            self.timer = nil          // startTimer() の timer == nil で判断するために、 timer = nil としておく
+            //進む・戻るボタンを使用不可に変更
+            go_forward_button.isEnabled = true
+            go_back_button.isEnabled = true
+            //再生・停止ボタンのラベルを再生にセット
+            restart_stop_button.setTitle("再生", for: UIControlState.normal)
+        }
     }
     //表示されている画像をResultViewControllerに渡す操作
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
